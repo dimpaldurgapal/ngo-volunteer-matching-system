@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NayePankh NGO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">🌍 NayePankh</div>
+  <nav id="navBar">
+    <a href="index.html">Home</a>
+    <a href="ngos.html">NGOs</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donation.html">Donate</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Change Lives, One Step at a Time ❤️</h1>
+  <p>Join NGOs, Volunteer, Donate & Make a Real Impact</p>
+
+  <div style="margin-top:20px;">
+    <button class="btn" onclick="location.href='ngos.html'">Explore NGOs</button>
+    <button class="btn" onclick="location.href='signup.html'">Get Started</button>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat-box">
+    <h2>1000+</h2>
+    <p>Volunteers</p>
+  </div>
+  <div class="stat-box">
+    <h2>50+</h2>
+    <p>NGOs</p>
+  </div>
+  <div class="stat-box">
+    <h2>₹10L+</h2>
+    <p>Donations</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+  <div class="feature">
+    <h3>🤝 Volunteer</h3>
+    <p>Join NGOs and contribute your time to meaningful causes.</p>
+  </div>
+
+  <div class="feature">
+    <h3>💳 Donate</h3>
+    <p>Support NGOs financially and make a real difference.</p>
+  </div>
+
+  <div class="feature">
+    <h3>🎓 Certificates</h3>
+    <p>Earn certificates for your contribution and build your profile.</p>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Make Impact? 🚀</h2>
+  <button class="btn" onclick="location.href='signup.html'">Join Now</button>
+</section>
+
+<!-- SCRIPTS -->
+<script src="script.js"></script>
+
+<script>
+  // 🔐 Navbar Dynamic Control
+  document.addEventListener("DOMContentLoaded", () => {
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+    let nav = document.getElementById("navBar");
+
+    if(user){
+      nav.innerHTML = `
+        <a href="index.html">Home</a>
+        <a href="ngos.html">NGOs</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#" onclick="logout()">Logout</a>
+      `;
+    }
+  });
+</script>
+
+</body>
+</html>

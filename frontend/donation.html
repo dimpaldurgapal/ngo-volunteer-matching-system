@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">💳 Secure Donation</div>
+</header>
+
+<div class="payment-container">
+
+  <h1>Make a Donation ❤️</h1>
+  <p>Your contribution matters</p>
+
+  <!-- NGO SELECT -->
+  <label>Select NGO</label><br>
+  <select id="ngo">
+    <option value="1">Helping Hands</option>
+    <option value="2">Health NGO</option>
+    <option value="3">Animal Rescue</option>
+  </select><br>
+
+  <!-- AMOUNT -->
+  <label>Enter Amount</label><br>
+  <input type="number" id="amount" placeholder="₹ Enter amount"><br>
+
+  <!-- PAYMENT METHOD -->
+  <label>Payment Method</label><br>
+  <select id="paymentMethod" onchange="togglePayment()">
+    <option value="">Select Method</option>
+    <option value="card">Credit/Debit Card</option>
+    <option value="upi">UPI</option>
+  </select>
+
+  <!-- CARD BOX -->
+  <div id="cardBox" style="display:none;">
+    <input type="text" placeholder="Card Number"><br>
+    <input type="text" placeholder="Expiry (MM/YY)"><br>
+    <input type="text" placeholder="CVV"><br>
+  </div>
+
+  <!-- UPI BOX -->
+  <div id="upiBox" style="display:none;">
+    <input type="text" placeholder="Enter UPI ID"><br>
+  </div>
+
+  <br>
+  <button class="btn" onclick="payNow()">💳 Pay Now</button>
+
+  <div id="paymentBox" style="margin-top:15px;"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

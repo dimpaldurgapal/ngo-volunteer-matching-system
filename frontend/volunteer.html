@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🤝 Volunteer</div>
+</header>
+
+<div style="text-align:center; padding:30px;">
+    <h2>Join NGO</h2>
+
+    <!-- NAME -->
+    <input id="name" placeholder="Your Name"><br><br>
+
+    <!-- SKILL DROPDOWN -->
+    <select id="skill">
+        <option value="">Select Skill</option>
+        <option value="Teaching">Teaching</option>
+        <option value="Medical Help">Medical Help</option>
+        <option value="Social Work">Social Work</option>
+        <option value="Animal Care">Animal Care</option>
+        <option value="Event Management">Event Management</option>
+    </select><br><br>
+
+    <!-- NGO DROPDOWN -->
+    <select id="ngo">
+        <option value="">Select NGO</option>
+        <option value="1">Helping Hands</option>
+        <option value="2">Health NGO</option>
+        <option value="3">Animal Rescue</option>
+    </select><br><br>
+
+    <button onclick="registerVolunteer()">Submit</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
